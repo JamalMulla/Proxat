@@ -71,7 +71,7 @@ class MainActivity : ConnectionsActivity() {
                     val fromBytes = Payload.fromBytes(initText.toByteArray(Charset.defaultCharset()))
                     send(fromBytes)
                     et_texttosend?.setText("")
-                    val message: TextView = TextView(applicationContext)
+                    val message = TextView(applicationContext)
                     message.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18.0f)
                     val llp = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
                     llp.setMargins(4, 4, 4, 4)
@@ -95,7 +95,7 @@ class MainActivity : ConnectionsActivity() {
             }
         }
 
-        scrollview?.post({ scrollview?.fullScroll(View.FOCUS_DOWN) })
+        scrollview?.post { scrollview?.fullScroll(View.FOCUS_DOWN) }
 
     }
 
